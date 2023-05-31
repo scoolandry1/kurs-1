@@ -1,0 +1,32 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      int a = 234;
+     System.out.println ("количество дней = " + a);     
+      int n = a / 7;
+      System.out.println ("количество недель = " + n);     
+      int m = a / 30;
+      System.out.println("количество месяцев = " + m);   
+       
+    }
+}
+import java.util.*;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+     System.out.println("двузначное число");
+      Scanner sc= new Scanner(System.in);
+           int num = sc.nextInt();
+          if ((num >=10) && (num <=99)){
+             int d = num/ 10 % 10;
+             int e = num % 10;
+             int sum=d+e;
+             int mult=d*e;
+           System.out.println("само число = " +num);
+           System.out.println("десятки числа = " +d);
+           System.out.println("единицы числа = " +e);
+           System.out.println("Сумма цифр числа = " +sum);
+           System.out.println("произведение цифр числа = " +mult);
+          }
+   }
+}
