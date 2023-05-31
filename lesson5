@@ -1,0 +1,113 @@
+import java.util.*;
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args){
+    System.out.println("  ");
+        Scanner sc= new Scanner(System.in);
+           double t = sc.nextInt();
+           System.out.println("температура в цельсиях = " +t);
+           double f= (t*1.8) + 32;
+           System.out.println("температура в фаренгейтах = " +f);
+           double k = t + 273.15;
+           System.out.println("температура в кельвинах = " +k);
+           double rm= t*0.8;
+           System.out.println("температура в реомюрах = " +rm);
+           double rn=(t+273.15)*0.8;
+           System.out.println("температура в ранкиах = " +rn);
+  } 
+}
+
+import java.util.*;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+      System.out.println("натуральное число");
+      Scanner sc= new Scanner(System.in);
+      int num = sc.nextInt();
+      System.out.printf("Само число - %d\n",num);
+       if(num < 0){
+         System.out.println( + num + " < 0." + " число введено не верно.");
+       }
+        if(num > 0){
+           boolean isEven = (num % 2 == 0);
+           boolean isEndedBySeven = (num % 10 == 7);
+           boolean isnum =((num >=10) && (num <=99));
+           System.out.println("Число четное? " + isEven);
+           System.out.println("Число оканчивается на 7? " + isEndedBySeven);
+           System.out.println("Число двухзначное? "  + isnum);
+        }
+    }
+}
+/*даны два числа
+ уменьшить первое введенное число в два раза, 
+ если оно больше второго введенного числа
+ по модулю, а если ннаоборт-- вывести оба числа*/
+import java.util.*;
+import java.util.Scanner;
+public class Main { 
+    public static void main(String[] args) {
+      Scanner sc= new Scanner(System.in);
+      int a = sc.nextInt();
+      int b = sc.nextInt();
+      System.out.printf("превое число = %d,  второе число = %d\n", a, b);
+      if(Math.abs(a) > Math.abs(b)) {
+        a = a / 2;
+        System.out.printf("превое число = %d\n",a);
+      }
+        if(Math.abs(a) < Math.abs(b)) {
+          System.out.printf("превое число = %d,  второе число = %d\n", a, b);
+      }
+  }
+}
+/* задача на применение оператора switch */
+import java.util.*;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc= new Scanner(System.in);
+      int  liatl = sc.nextInt();
+      System.out.println("лёгкая атлетика");
+      switch(liatl) {
+        case 0:
+          System.out.println("кросс");
+          break;
+        case 1:
+          System.out.println("бег");
+          break;
+        case 2:
+          System.out.println("спортивная ходьба");
+          break;
+        case 3:
+          System.out.println("Метание диска");
+          break;
+        case 4:
+          System.out.println("Метание копья");
+           break;
+        case 5:
+          System.out.println("Метание молота");
+           break;
+        case 6:
+          System.out.println("Прыжки в длину");
+          break;
+        case 7:
+          System.out.println("Прыжки в высоту");
+          break;
+        case 8:
+          System.out.println("Прыжки с шестом");
+          break;
+        case 9:
+          System.out.println("Тройной прыжок");
+          break;
+        case 10:
+          System.out.println("Шоссейный бег");
+          break;
+        case 11:
+          System.out.println("Многоборье");
+          break; 
+        
+        default:
+          System.out.println("этот вид спорта не лёгкая атлетика");
+          break;
+      }
+  }
+}
