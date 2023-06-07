@@ -1,0 +1,101 @@
+import java.util.*;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+      System.out.println("Задача про футбол");
+      Scanner sc = new Scanner(System.in);
+      int O = sc.nextInt();
+      System.out.printf("Очки команды - %d\n", O);
+      System.out.print("Результат игры - ");
+      switch(O) {
+        case 0:
+          System.out.println("Проигрыш");
+          break;
+        case 1:
+          System.out.println("Ничья");
+          break;
+        case 3:
+          System.out.println("Выигрыш");
+          break;
+        default:
+          System.out.println("Некорректное количество очков");
+          break;
+      }
+  }
+}
+import java.util.*;
+import java.util.Scanner;
+/*даны два числа
+ если кв.корень из вотрого меньше первого, то второе увеличить в пять раз
+ добавлено: а кв.корень второго меньше превого то превое +0.5, воторе/2*/
+public class Main {
+    public static void main(String[] args) {
+      
+      Scanner sc = new Scanner (System.in);
+      double a = sc.nextDouble();
+      double b = sc.nextDouble();
+      System.out.println("первое число = " +a+ "" );
+      System.out.println("второе число = " +b);
+      if (Math.sqrt(b)<a){
+        System.out.println("третье число = " +b*5);
+      }
+       else if (Math.sqrt(b)>a){
+           double result1=a+0.5;
+           double result2=b/2;
+          System.out.println("четвёртое число = " +result1);
+          System.out.println("пятое число = " +result2);
+        }
+      }   
+  }
+  import java.util.*;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+    System.out.printf("двухзначное число");
+      Scanner sc= new Scanner(System.in);
+      int DVnum = sc.nextInt();
+      System.out.printf("Число - %d\n", DVnum);
+      int d = DVnum/ 10 % 10;
+      int e = DVnum % 10;
+      int sum = d + e;
+      System.out.printf("Сумма цифр = %d\n ", sum);
+      if(DVnum/10 < 10 && DVnum/10 >= 1) {
+      }
+        if(sum/10 > 0) {
+          System.out.println("Сумма цифр - двузначное число");
+        }
+        else{
+        System.out.println("Сумма цифр - недвузначное число");
+        }
+        if(sum > DVnum) 
+        System.out.printf("Сумма цифр %d > числа %d", sum, DVnum);
+      else{ 
+        System.out.printf("Сумма цифр %d < числа %d\n", sum, DVnum);
+      }
+    }
+}   
+import java.util.*;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc= new Scanner (System.in);
+      System.out.println("Задача про неавенство");
+      double a = sc.nextDouble();
+      double b = sc.nextDouble();
+      double c = sc.nextDouble();
+      System.out.printf("Число 1 = %.2f, число 2 = %.2f, число 3 = %.2f\n", a, b, c);
+      if((a < b) && (b < c) && (a < c)) {
+        System.out.printf("Неравенство %.2f < %.2f < %.2f выполняется\n", a, b, c);
+      }
+      else {
+   System.out.printf("Неравенство %.2f < %.2f < %.2f не выполняется\n", a, b, c);
+      }
+      if((b > a) && (a > c) && (b > c)) { 
+        System.out.printf("Неравенство %.2f > %.2f > %.2f выполняется\n", b, a, c);
+      }
+    else {
+   System.out.printf("Неравенство %.2f > %.2f > %.2f не выполняется\n", b, a, c);
+      }
+  }
+}
+
