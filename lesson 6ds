@@ -1,4 +1,23 @@
 import java.util.*;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] aтgs) {
+      System.out.println("программа вывода любого числа любое"); 
+      System.out.println("заданное число раз");
+      Scanner sc= new Scanner(System.in);
+      int cont = sc.nextInt();
+      int a = 0;
+      if (cont>0) {
+      while (a<cont) {
+      System.out.println(cont);
+      a++;
+      }
+      }
+      else{ 
+      System.out.println("Некорректное количество печати числа");
+      }
+  }
+}import java.util.*;
 public class Main {
     public static void main(String[] aтgs) {
        System.out.println("Задача 2\n");
