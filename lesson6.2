@@ -54,3 +54,45 @@ System.out.println("Задача whle");
     }    
   }
   
+import java.util.*;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+      Scanner sc= new Scanner(System.in);
+    int chislo101 = sc.nextInt();
+      int origchislo101 = chislo101;
+      int max = 0;
+      while (chislo101>0) {
+        int ostChislo101 = chislo101%10;
+        if (ostChislo101 > max) {
+          max = ostChislo101;
+          if (max==9) 
+          break;
+        }
+        chislo101 = chislo101/10;
+      } 
+      System.out.printf("В числе %d максимальная цифра - %d\n", origchislo101, max);
+    }
+}
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      System.out.println("Задача 10.2");
+      Scanner sc= new Scanner(System.in);
+      int chislo102 = sc.nextInt();
+      int origchislo102 = chislo102;
+      int min = 9;
+      while (chislo102>0) {
+        int ostChislo102 = chislo102%10;
+        if (ostChislo102 < min) {
+          min = ostChislo102;
+          if (min==0) 
+          break;
+        }
+        chislo102 = chislo102/10;
+      } 
+      System.out.printf("В числе %d минимальная цифра - %d\n", origchislo102, min);
+      
+  }
+}
