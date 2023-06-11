@@ -1,56 +1,42 @@
-import java.util.Scanner;
-public class Main {
-    public static void main(String[] args) {
-      System.out.println("ряд фибоначчи");
-      Scanner sc= new Scanner(System.in);
-      int n = sc.nextInt();
-    int sum = 2;
-    int n0 = 1;
-    int n1 = 1;
-    int next = 0;
-    int k = 0;
-    System.out.print(n0+" "+n1+" ");
-     for(int i = 3; i <=n; i++){
-			next = n0+n1;
-			System.out.print(next +" ");
-			n0=n1;
-			n1=next;
-			sum = n1+sum;
-  }
-	System.out.println();
-	if (sum%2==0){
-			  System.out.printf("Сумма первых %d членов ряда\n", n);
-			  System.out.printf("четное число,она равна %d\n", sum);
-			}
-			else{			  
-			  System.out.printf("Сумма первых %d членов ряда\n", n);
-              System.out.printf("нечетное число ");
-			}
-    }
-}
 import java.util.*;
 public class Main {
-  
-    public static void main(String[] args) {
-      System.out.println("Задача:Вывод цикла от 10 до 30 "); 
-      System.out.println("(while и  do--while) "); 
-System.out.println("1 -- while");
-      int n = 10;
-      while (n<31) {
-        System.out.println(n);
-        n++;
+  public static void main(String[] args) {
+    System.out.println("вывести в заданном диапазоне");
+    System.out.println("числа кратные 39");
+        for(int i = 600; i <= 1000; i++) {
+        if(i % 39 == 0) {
+          System.out.println(i);
+          
+        }
       }
-      
-      System.out.println(" ");
-      
-      System.out.println("2 do--while");
-      int n1 = 10;
-      do {
-        System.out.println(n1);
-        n1++;
-      }
-      while (n1<31);
-      
-      System.out.println(" ");
-    }    
   }
+  
+}      System.out.println("Задача 12.1");
+      double vklad1 = 1000;
+      double percVklad1 = 0;
+      int mes1 = 0;
+      while (percVklad1<30) {
+        vklad1 = vklad1+percVklad1;
+        percVklad1 = vklad1*0.02;
+        System.out.printf("%.5f\n", percVklad1);
+        mes1++;
+      }
+      System.out.printf("Проценты по вкладу превысят 30 руб. за %d месяц\n", mes1);
+      
+      
+      System.out.println(" ");
+      
+      System.out.println("Задача 12.2");
+      double vklad2 = 1000;
+      double percVklad2 = 0;
+      int mes2 = 0;
+      while (vklad2<1200) {
+        percVklad2 = vklad2*0.02;
+        vklad2 = vklad2+percVklad2;
+        System.out.printf("%.5f\n", vklad2);
+        mes2++;
+      }
+      System.out.printf("Вклад превысит 1200 руб. через %d месяцев\n", mes2);
+            
+  }
+}      
