@@ -17,15 +17,20 @@ public class Main {
       System.out.println("Некорректное количество печати числа");
       }
   }
-}import java.util.*;
+}
+import java.util.*;
 public class Main {
     public static void main(String[] aтgs) {
        System.out.println("Задача 2\n");
        System.out.println("вывести в столбик   \n");
-        System.out.println("чисел от 25 25.2 25.8 до 36 36.2 36.8\n");
-      for(int i = 25; i <= 36; i++) {
-        System.out.printf("%d %d.2 %d.8 \n", i, i,i, i,i);
+        System.out.println("пары чисел от 25 25.2 25.8 до 36 36.2 36.8\n");
+       double b = 25;
+      while (b<36) {
+        System.out.printf("%.0f %.1f %.1f \n", b, b+0.5,b-0.2);
+        b++;
       }
+    }
+}
     }
  import java.util.*;
 import java.util.Scanner;
