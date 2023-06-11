@@ -83,7 +83,7 @@ import java.util.*;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-      System.out.println("ряд фибоначчи");
+      System.out.println(" задача 6 -- ряд фибоначчи");
       Scanner sc= new Scanner(System.in);
       int n = sc.nextInt();
     int sum = 2;
@@ -114,10 +114,78 @@ public class Main {
     }
 }
 import java.util.*;
+import java.util.Scanner;
 public class Main {
   
     public static void main(String[] args) {
-      System.out.println("Вывод цикла от 10 до 30 "); 
+      System.out.println(" задача 7 -- дана");
+      System.out.println("непустая последовательность целых чисел,") ;
+      System.out.println("оканчивающаяся нулем. Найти:");
+      System.out.println("1.сумму всех чисел последовательности;"); 
+
+    public static void main(String[] args) {
+      
+      Scanner sc = new Scanner(System.in);
+      
+      int temp = sc.nextInt();
+      int sum = 0;
+      int counter = 0;
+      
+      while(temp != 0) {
+        counter++;
+        sum = sum + temp;
+        System.out.print(temp + " ");
+        temp = sc.nextInt();
+      }
+      System.out.println();
+      
+      System.out.println("Sum = " + sum);
+      System.out.println("Counter = " + counter);
+      
+      System.out.println("Average = " + ((double)sum/counter));
+      
+  }
+   System.out.println(2.количествовсехчиселпоследовательности."); 
+   import java.util.*;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+      
+      Scanner sc = new Scanner(System.in);
+      
+      int sum = 0;
+      int counter = 0;
+      
+      while(sc.hasNext()) {
+        int temp = sc.nextInt();
+        counter++;
+        sum = sum + temp;
+        System.out.print(temp + " ");
+      }
+      System.out.println();
+      
+      System.out.println("Sum = " + sum);
+      System.out.println("Counter = " + counter);
+      
+      System.out.println("Average = " + ((double)sum/counter));
+}
+import java.util.*;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+      System.out.println(" задача 8 -- Данонатуральноечисло. Определить:");
+      System.out.println("сколько раз в нем встречается последняя цифра");
+      System.out.println("количество четных цифр в нем");
+      System.out.println("сумму его цифр, больших пяти");
+      System.out.println("произведение его цифр, больших семи");
+      
+      
+import java.util.*;
+public class Main {
+  
+    public static void main(String[] args) {
+      System.out.println(" задача 9 -- Вывод цикла от 10 до 30 "); 
       System.out.println("(while и  do--while) "); 
 System.out.println("Задача whle");
       int n = 10;
