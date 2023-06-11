@@ -145,7 +145,7 @@ public class Main {
       System.out.println("Average = " + ((double)sum/counter));
       
   }
-   System.out.println(2.количествовсехчиселпоследовательности."); 
+   System.out.println(2.количество всех чисел последовательности."); 
    import java.util.*;
 import java.util.Scanner;
 
@@ -175,11 +175,67 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
       System.out.println(" задача 8 -- Данонатуральноечисло. Определить:");
-      System.out.println("сколько раз в нем встречается последняя цифра");
-      System.out.println("количество четных цифр в нем");
+      System.out.println(""сколько раз в нем встречается последняя цифра");
+      System.out.println("сколько раз в нем встречаются чётные цифры");
       System.out.println("сумму его цифр, больших пяти");
-      System.out.println("произведение его цифр, больших семи");
+      System.out.println("произведение цифр (больше 7)");
+      Scanner sc= new Scanner (System.in);
+      int chislo82 = sc.nextInt();
+      int origchislo82 = chislo82;
+      int poslChislo82 = chislo82%10;
+      int counter82 = 0;
+      while (chislo82>0) {
+        int ostChislo82 = chislo82%10;
+        if (ostChislo82 == poslChislo82) {
+          counter82++;
+        }
+        chislo82 = chislo82/10;
+      }
+      System.out.printf("В числе %d последняя цифра %d, встречается %d раз(а)\n", origchislo82, poslChislo82, counter82);
       
+      int chislo83 = sc.nextInt();
+      int origchislo83 = chislo83;
+      int counter83 = 0;
+      while (chislo83>0) {
+        int ostChislo83 = chislo83%10;
+        if (ostChislo83%2 == 0) {
+          counter83++;
+        }
+        chislo83 = chislo83/10;
+      }
+      System.out.printf("В числе %d количество чётных цифр - %d\n", origchislo83, counter83);
+      
+      System.out.println(" ");
+      
+      System.out.println("3.сумму его цифр, больших пяти");
+      int chislo84 = sc.nextInt();
+      int origchislo84 = chislo84;
+      int sumOfFive84 = 0;
+      while (chislo84>0) {
+        int ostChislo84 = chislo84%10;
+        if (ostChislo84 > 5) {
+          sumOfFive84 = sumOfFive84+ostChislo84;
+        }
+        chislo84 = chislo84/10;
+      }
+      System.out.printf("В числе %d сумма цифр (больше 5) = %d\n", origchislo84, sumOfFive84);
+      
+      System.out.println(" ");
+      
+      System.out.println("4.произведение его цифр, больших семи");
+      int chislo85 = sc.nextInt();
+      int origchislo85 = chislo85;
+      int proizOfSeven85 = 1;
+      while (chislo85>0) {
+        int ostChislo85 = chislo85%10;
+        if (ostChislo85 > 7) {
+          proizOfSeven85 = proizOfSeven85*ostChislo85;
+        }
+        chislo85 = chislo85/10;
+      }
+      System.out.printf("В числе %d произведение цифр (больше 7) = %d\n", origchislo85, proizOfSeven85);
+  }
+}
       
 import java.util.*;
 public class Main {
