@@ -1,0 +1,106 @@
+import java.util.*;
+import java.util.Scanner;
+import java.util.Random;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class Main {
+ 
+   //генерация массива
+   public static double[] generateArray(int n) { 
+      
+      double[] array = new double[n];
+      Random r = new Random();
+      
+      for(int i = 0; i < array.length; i++) {
+        array[i] = r.nextDouble() * 100;
+      }
+      
+      return array;
+    }
+    // метод печати массива
+   public static void printArray(double[] array) {
+      
+      for(int i = 0; i < array.length; i++) {
+        System.out.printf("%.2f ", array[i]);
+      }
+      System.out.println();
+    }
+   
+    //сумма элементов масссива
+   public static double[] sumofElements(double[] array) {
+     double sum = 0;
+     for (int i = 0; i < array.length; i++) {
+       sum = sum+array[i];
+       }
+       System.out.printf("Сумма элементов массива равна %.2f \n", sum);
+    return array;
+      }
+      
+      // произведение элементов массива
+       public static double[] multiplyElements(double[] array) {
+     double multiply = 1;
+     for (int i = 0; i < array.length; i++) {
+       multiply = multiply*array[i];
+       }
+       System.out.printf("Произведение элементов массива равна %.2f \n", multiply);
+    return array;
+      }
+      
+       // сумма квадратов элементов массива Math.pow()
+       public static double[] sumSquaresElements(double[] array) {
+     double sumSquares = 0;
+     for (int i = 0; i < array.length; i++) {
+       sumSquares = sumSquares+Math.pow(array[i],2);
+       }
+       System.out.printf("Cумма квадратов элементов массива равна %.2f \n", sumSquares);
+    return array;
+      }
+      
+      // сумма первых 6 элементов массива 
+       public static double[] sumFirstSixElements(double[] array) {
+     double sumFirstSix = 0;
+     for (int i = 0;i < 6; i++) {
+       sumFirstSix = sumFirstSix+array[i];
+       }
+       System.out.printf("Cумма первых шести элементов массива равна %.2f \n", sumFirstSix);
+    return array;
+      }
+      
+      // сумма всех положительных элементов
+       public static double[] sumPositiveElements(double[] array) {
+     
+     double sumPositive = 0;
+     for (int i = 0;i <array.length; i++) {
+       if (array[i] > 0)
+       sumPositive = sumPositive+array[i];
+       }
+       System.out.printf("Сумма положительных элементов массива равна %.2f \n", sumPositive);
+    return array;
+      }
+      
+      // сумма элементов кратных 5
+      
+       public static double[] sumMultiples5Elements(double[] array) {
+      double sumMultiples5 = 0;
+     for (int i = 0;i <array.length; i++) {
+      if(i % 5 == 0);
+       sumMultiples5 = sumMultiples5+array[i];
+       }
+       System.out.printf("Сумма  элементов массива кратных 5 равна %.2f \n", sumMultiples5);
+    return array;
+      }
+     public static void main(String[] args) 
+       double[] arr = { -13.1, 2.5, -2.2, 41.1, 1.1 ,-5.6};
+      printArray(array);
+      sumofElements(array);
+      multiplyElements(array);
+      sumSquaresElements(array);
+      sumFirstSixElements(array);
+      sumPositiveElements(array);
+      sumMultiples5Elements(array);
+        }
+}
+ 
